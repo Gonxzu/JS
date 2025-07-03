@@ -1,0 +1,40 @@
+<!--HTML:** Deve conter um elemento de texto (ex: um parágrafo)
+     com um estilo básico e um botão.
+    JavaScript: Ao clicar no botão, o elemento de texto deve ter uma classe CSS
+     específica adicionada ou removida, alternando assim seu estilo
+      (ex: mudar a cor do texto, adicionar negrito, etc.).-->
+
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=], initial-scale=1.0">
+        <title>Document</title>
+      </head>
+      <body>
+        <p id="p" class="classe1"> Seu pior pecado é ter se destruído e traído a si mesmo por nada. — Dostoiévski</p>
+
+        <button id="botao"> Negrito </button>
+
+        <style>
+
+            .classe1 {
+                font-family:Georgia, 'Times New Roman', Times, serif;
+            }
+            .classe2 {
+                font-weight: bold;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+
+        </style>
+        <script>
+            const p = document.getElementById('p');
+            const botao = document.getElementById('botao')
+
+            botao.addEventListener('click', () => {
+                p.classList.toggle('classe2')
+            })
+
+        </script>
+      </body>
+      </html>

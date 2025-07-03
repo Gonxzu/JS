@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Alternar Visibilidade</title>
+  <style>
+    #texto {
+      display: block; /* inicialmente visível */
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="texto">VASCO DA GAMA</div>
+  <button id="alternarBtn">Alternar Visibilidade</button>
+
+  <script>
+    const texto = document.getElementById('texto');
+    const botao = document.getElementById('alternarBtn');
+
+    botao.addEventListener('click', () => {
+      if (texto.style.display === 'none') {
+        texto.style.display = 'block'; // mostra o texto
+      } else {
+        texto.style.display = 'none'; // esconde o texto
+      }
+    });
+  </script>
+
+</body>
+</html>

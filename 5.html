@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Navegação entre Imagens</title>
+  <style>
+    #imagem {
+      width: 300px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <img id="imagem" src="https://via.placeholder.com/300x200.png?text=Imagem+1" alt="Imagem">
+  <br>
+  <button id="proximaBtn">Próxima Imagem</button>
+
+  <script>
+
+    // getElementById = pega por ID, ou seja, ID = ""
+    const imagem = document.getElementById('imagem');
+    const botao = document.getElementById('proximaBtn');
+
+    // Lista de URLs de imagens
+    const imagens = [
+      'https://offloadmedia.feverup.com/saopaulosecreto.com/wp-content/uploads/2021/06/09043800/batman-s%C3%A3o-paulo-e1623164229482-1024x632.jpeg',
+      'https://https%3A%2F%2Fpt.wallpapers.com%2Fimagens-do-batman&psig=AOvVaw2d5LaAtdiZhBzA5y-tOSve&ust=1751334566628000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMjYyueDmI4DFQAAAAAdAAAAABAL',
+      'https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2024/09/batman-calcada-da-fama.png?w=1200&h=900&crop=0'
+    ];
+
+    let indice = 0;
+
+    botao.addEventListener('click', () => {
+      // Avança para o próximo índice, voltando ao início se necessário
+      indice = (indice + 1) % imagens.length;
+      imagem.src = imagens[indice];
+    });
+  </script>
+
+</body>
+</html>

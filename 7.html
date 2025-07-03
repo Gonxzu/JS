@@ -1,0 +1,45 @@
+<!-- - **HTML:** Deve exibir uma imagem e dois botões, um para aumentar e outro para diminuir o tamanho da imagem.
+- **JavaScript:** Ao clicar no botão "Aumentar", a imagem deve ter suas 
+dimensões aumentadas. Ao clicar no botão "Diminuir", suas dimensões devem ser reduzidas.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="imagem" src="https://th.bing.com/th/id/R.baa445559a67ac63ceb02b179f0a4d37?rik=AWb2K5ldsZ9I6Q&riu=http%3a%2f%2fwww.thefamouspeople.com%2fprofiles%2fimages%2fvasco-da-gama-4.jpg&ehk=ze4K9JtkiPWnizaAfgq0To8YmTsbxGsKWbA%2bGrLg%2f8U%3d&risl=&pid=ImgRaw&r=0"
+    <br>
+    <button id="AUMENTAR"> AUMENTAR </button>
+    <button id="DIMINUIR"> DIMINUIR </button>
+
+    <style>
+        img{
+            width: 1000px;
+            height: 1000px;
+        }
+
+    </style>
+
+    <script>
+
+        const imagem = document.getElementById("imagem")
+        const AUMENTAR = document.getElementById("AUMENTAR")
+        const DIMINUIR = document.getElementById("DIMINUIR")
+
+        AUMENTAR.addEventListener('click', () => {
+            imagem.style.width = "1100px"
+            imagem.style.height = "1100px"
+        })
+
+        DIMINUIR.addEventListener('click', () => {
+            imagem.style.width = "500px"
+            imagem.style.height = "500px"
+        })
+
+
+    </script>
+</body>
+</html>

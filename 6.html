@@ -1,0 +1,42 @@
+
+ <!-- HTML: Deve conter um campo de entrada de texto e um elemento para exibir o texto digitado.
+// JavaScript: Conforme o usuário digita no campo de entrada, o texto digitado deve ser exibido
+// em tempo real no elemento de exibição -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1> ESCREVA </h1>
+    <input type="text" id="txt" placeholder="escreva">
+    <br>
+    <h1> EM TEMPO REAL </h1>
+    <div id="mostrar">
+    </div>
+
+    <style>
+
+        #mostrar{
+            background: aqua;
+            height: 50vh;
+        }
+    </style>
+
+    <script>
+
+        const mostrar = document.getElementById('mostrar');
+        const txt = document.getElementById('txt');
+
+        txt.addEventListener('input', () => {
+            mostrar.textContent = txt.value;
+    });
+    </script>
+
+</body>
+</html>
+

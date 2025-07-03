@@ -1,0 +1,50 @@
+<!-- HTML: Deve apresentar vários botões, cada um representando uma cor diferente.
+    JavaScript: Ao clicar em qualquer um dos botões, a cor de fundo de toda a página
+    deve ser alterada para a cor correspondente ao botão clicado.-->
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+            <button id="roxo"> ROXO </button>
+            <button id="red"> VERMELHO </button>
+            <button id="blue"> AZUL </button>
+            <button id="algo"> SURPRESA </button>
+        <style>
+
+            body{
+                background: gold;
+            }
+
+        </style>
+
+        <script>
+            const body = document.querySelector('body');
+            const roxo = document.getElementById('roxo');
+            const red = document.getElementById('red');
+            const blue = document.getElementById('blue');
+            const algo = document.getElementById('algo');
+
+            roxo.addEventListener('click', () => {
+                body.style.background = "purple"
+            })
+
+            red.addEventListener('click', () => {
+                body.style.background = "red"
+            })
+
+            blue.addEventListener('click', () => {
+                body.style.background = "blue"
+            })
+
+            algo.addEventListener('click', () => {
+                body.style.background = "green"
+            })
+
+        </script>
+    </body>
+    </html>

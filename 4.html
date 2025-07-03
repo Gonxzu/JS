@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contador Interativo</title>
+  <style>
+    #contador {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="contador">0</div>
+  <button id="incrementarBtn"> + 1 </button>
+
+  <script>
+    const contador = document.getElementById('contador');
+    const botao = document.getElementById('incrementarBtn');
+
+    botao.addEventListener('click', () => {
+      // soma +1
+      let numeroAtual = parseInt(contador.textContent);
+      numeroAtual += 1;
+      contador.textContent = numeroAtual;
+    });
+  </script>
+
+</body>
+</html>
